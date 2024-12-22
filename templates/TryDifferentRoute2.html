@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+     <title>DIU BUS</title>
+     <!-- CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+     <link rel="stylesheet" type="text/css" href="../static/css/TryDifferentRoute.css">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/TryDifferentRoute.css')}}">
+     <!-- JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div class="main_body">
+          <div class="width_center">
+               <img class="logo" src="static/images/logo.png" alt="">
+          </div>
+          <div class="main_area">
+               <div class="width_center">
+                    <div class="width_space-between width1">
+                         <a href="ScheduleStudentView.html" class="a_box">
+                              <div class="green_box">
+                                   <img class="box_image" src="static/images/schedule.png" alt="">
+                                   <div>Schedule</div>
+                              </div>
+                         </a>
+                         <a href="" class="a_box">
+                              <div class="red_box">
+                                   <img class="box_image" src="static/images/status.png" alt="">
+                                   <div>Status</div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+               <div class="default_route">
+                    <div class="first_half">
+                         <input type="submit" class="width_center" value="Uttara" id="location1">
+                         <button onclick="swapValues()" class="swap"><img src="static/images/swap_icon.png" alt=""
+                                   srcset=""></button>
+                         <input type="submit" class="width_center" value="DIU" id="location2">
+                    </div>
+                    <button class="search"><img src="static/images/search_icon.png" alt="" srcset=""></button>
+               </div>
+               <script>
+                    function swapValues() {
+                         let input1 = document.getElementById("location1");
+                         let input2 = document.getElementById("location2");
+
+                         let input1Value = input1.value;
+                         let input2Value = input2.value;
+
+                         input1.value = input2Value;
+                         input2.value = input1Value;
+                    }
+               </script>
+               <form action="/buses" method="post">
+                    <div class="filter">
+                         <select id="input1" name="from" onchange="updateOptions()">
+                              <option value="" disabled selected hidden>Select an option</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+
+                         <hr class="line1">
+                         <select id="input2" name="to" onchange="updateOptions()">
+                              <option value="" disabled selected hidden>Select an option</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+
+                    </div>
+                    <div class="width_center">
+                         <button class="green_button">Search for available bus</button>
+                    </div>
+
+                    <script>
+                         function updateOptions() {
+                              var input1 = document.getElementById("input1");
+                              var input2 = document.getElementById("input2");
+                              var selectedValue1 = input1.value;
+                              var selectedValue2 = input2.value;
+
+                              for (var i = 0; i < input2.options.length; i++) {
+                                   input2.options[i].disabled = false;
+                              }
+                              if (selectedValue1 === "Uttara" || selectedValue1 === "Mirpur" || selectedValue1 === "Dhanmondi") {
+                                   input2.value = "DIU"; // Set input2 value to DIU
+                                   for (var i = 1; i < input2.options.length; i++) {
+                                        input2.options[i].disabled = true;
+                                   }
+                                   input2.options[1].disabled = false; // Disable all options in input2 except DIU
+                              }
+                         }
+                    </script>
+                    <div class="jim"><input type="checkbox" class="checkbox" name="save">
+                         <p>Save this route for future</p>
+                    </div>
+               </form>
+          </div>
+     </div>
+</body>
+
+</html>

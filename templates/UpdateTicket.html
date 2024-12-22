@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    <title>DIU BUS</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/AddTicket.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/AddTicket.css')}}">
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main_body">
+        <div class="width_center">
+            <img class="logo" src="static/images/logo.png" alt="">
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="modal" tabindex="-1" id="exampleModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{msg}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-color" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="main_area">
+            <form action="/search_buses" method="post">
+                <div class="filter2">
+                    <select id="input1" onchange="updateOptions()" name="from">
+                        <option value="" disabled selected hidden>From</option>
+                        <option value="DIU">DIU</option>
+                        <option value="Uttara">Uttara</option>
+                        <option value="Mirpur">Mirpur</option>
+                        <option value="Dhanmondi">Dhanmondi</option>
+                    </select>
+                    <hr class="line1">
+                    <select id="input2" onchange="updateOptions()" name="to">
+                        <option value="" disabled selected hidden>To</option>
+                        <option value="DIU">DIU</option>
+                        <option value="Uttara">Uttara</option>
+                        <option value="Mirpur">Mirpur</option>
+                        <option value="Dhanmondi">Dhanmondi</option>
+                    </select>
+                </div>
+                <p style="margin-left: 8%; font-weight: bold;">OLD Time Add:</p>
+                <div class="filter">
+                    <div class="jim width_space-between">
+                        <p class="">Start time</p>
+                        <input type="time" class="timepicker" name="old_start_time">
+                    </div>
+                    
+                </div>
+                <p style="margin-left: 8%; font-weight: bold;">New Time Add:</p>
+                <div class="filter">
+
+                    <div class="jim width_space-between">
+                        <p class="">Start time</p>
+                        <input type="time" class="timepicker" name="new_start_time">
+                    </div>
+                    <hr class="line1">
+                    
+                </div>
+                <div class="filter2">
+                    <select id="input1" name="tk">
+                        <option value="20" selected>20</option>
+                        <option value="25">25</option>
+                    </select>
+                    <hr class="line1">
+                    <select id="input1" name="status">
+                        <option value="Unknown" selected>Unknown</option>
+                        <option value="Gone">Gone</option>
+                        <option value="Avialable">Avialable</option>
+                    </select>
+                </div>
+
+                <div class="width_center">
+                    <button class="green_button">Update ticket</button>
+                </div>
+            </form>
+            <div class="width_center">
+                <a href="ScheduleManagerView.html" class="a_button"><button class="white_button">Back</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("Windows loaded");
+            $("#exampleModal").modal("show");
+        })
+    </script>
+</body>
+
+</html>

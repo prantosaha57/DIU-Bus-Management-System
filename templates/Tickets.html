@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+     <title>DIU BUS</title>
+     <!-- CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+     <link rel="stylesheet" type="text/css" href="../static/css/Tickets.css">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/Tickets.css')}}">
+     <!-- JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div class="main_body">
+          <div class="width_center">
+               <img class="logo" src="static/images/logo.png" alt="">
+          </div>
+          <div class="main_area">
+               <form action="/add_ticket" method="post">
+                    <div class="filter2">
+                         <select id="input1" name="route1">
+                              <option value="" disabled selected hidden>From</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+                         <hr class="line1">
+                         <select id="input2" name="route2">
+                              <option value="" disabled selected hidden>To</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+                    </div>
+                    <div class="width_center">
+                         <button class="green_button">Filter</button>
+                    </div>
+               </form>
+               <div class="main_area">
+
+                    {% for dhan in dhans %}
+                    <div class="filter1">
+                         <div class="width_center">
+                              <div class="width_space-between Ticket_width">
+                                   <div class="location1 location">{{dhan[0]}}</div>
+                                   <img src="../static/images/green_round.png" alt="" srcset="" class="round_image">
+                                   <hr class="line2">
+                                   <img src="../static/images/red_round.png" alt="" srcset="" class="round_image">
+                                   <div class="location2 location">{{dhan[1]}}</div>
+                              </div>
+                         </div>
+                         <div class="width_center">
+                              <div class="width_space-between Ticket_width">
+                                   <div class="">{{dhan[2]}}</div>
+                                   <div class="">{{dhan[3]}}</div>
+                              </div>
+                         </div>
+                         <div class="width_center">
+                              <hr class="line4">
+                         </div>
+                         <div class="width_center m10">
+                              <div class="width_space-between Ticket_width">
+                                   <div class="">Status</div>
+                                   <div class="div">
+                                        <button class="littlered_button ">{{dhan[4]}}</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    {% endfor %}
+                    <div class="width_center">
+                         <a href="home2.html" class="a_button"><button class="white_button">Back</button></a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>
+
+</html>

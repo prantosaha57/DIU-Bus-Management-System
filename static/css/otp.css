@@ -1,0 +1,13 @@
+@keyframes anim {
+     0% {
+         color: black;
+     }
+
+     50% {
+         color: #3ED081;
+     }
+
+     100% {
+         color: red;
+     }
+ }

@@ -1,0 +1,30 @@
+input
+{
+     text-align: left;
+     padding-left: 30px;
+     margin-bottom: 2vh;
+}
+input::placeholder 
+{
+     text-align: left;
+}
+a{
+     color: #ffae00;
+     font-size: 18px;
+     font-weight: 500;
+}
+a:hover{
+     color:#ffc23d ;
+}
+.noacc{
+     margin-bottom: 3vh;
+     margin-left: 20px;
+}
+.file{
+     background: #ffffff;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 18px;
+}

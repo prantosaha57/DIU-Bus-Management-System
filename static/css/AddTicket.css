@@ -1,0 +1,67 @@
+.filter
+{
+     width: 85%;
+     max-width: 397px;
+     height: auto;
+     margin: 0 auto;
+     border-radius: 10px;
+     border: 0;
+     margin-bottom: 3vh;
+     background-color: #ffffff;
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.filter2
+{
+     width: 85%;
+     max-width: 397px;
+     height: 120px;
+     margin: 0 auto;
+     border-radius: 10px;
+     border: 0;
+     margin-bottom: 3vh;
+     background-color: #ffffff;
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.filters{
+     width: 85%;
+     max-width: 397px;
+     height: auto;
+     margin: 0 auto;
+     border-radius: 10px;
+     border: 0;
+     margin-bottom: 3vh;
+     background-color: #ffffff;
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+select
+{
+     width: 85%;
+     max-width: 397px;
+     height: 59px;
+     margin: 0 auto;
+     border-radius: 10px;
+     border: 0;
+     background-color: transparent;
+     display: flex;
+}
+.line1
+{
+     width: 90% ;
+     margin: 0 auto;
+     padding:0;
+}
+.jim
+{
+     padding-top: 15px;
+     margin-left: 10%;
+     width: 80%;
+     
+}
+input
+{
+     background-color: transparent;
+     box-shadow: none;
+     height: 30px;
+     width: 70%;
+     margin-bottom: 0;
+}

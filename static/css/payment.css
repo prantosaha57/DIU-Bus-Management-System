@@ -1,0 +1,30 @@
+.white_box {
+    width: 350px;
+    height: 120px;
+    margin-bottom: 3vh;
+    border-radius: 10px;
+    border: 0;
+    color:  #fff;
+    background-image: linear-gradient(#8CF9A9, #3ED081);
+    /* background: #ffffff; */
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 28px;
+}
+.pay{
+    padding-top: 2vh;
+    /* padding-left: 6vh; */
+    font-weight: 600;
+    
+}
+.box {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    max-width: 500px;
+}
+.tk{
+    /* text-align: right; */
+    font-weight: 700;
+    padding-top: 2vh;
+}

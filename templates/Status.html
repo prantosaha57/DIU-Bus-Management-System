@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+     <title>DIU BUS</title>
+     <!-- CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+     <link rel="stylesheet" type="text/css" href="../static/css/SearchForAvailableBus.css">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/SearchForAvailableBus.css')}}">
+     <!-- JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+          i{
+               font-size: 30px;
+               margin-top: 5%;
+               margin-left: 5%;
+               color: #000;
+          }
+          i:hover{
+               color: lightgreen;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="main_body">
+          <a href="TryDifferentRoute.html"><i class="fa-solid fa-arrow-left"></i></a>
+          <div class="width_center">
+               <img class="logo" src="../static/images/logo.png" alt="">
+          </div>
+          <div class="main_area">
+               <form action="/filters" method="post">
+                    <div class="filter2">
+                         <select id="input1" onchange="updateOptions()" name="froms">
+                              <option value="" disabled selected hidden>From</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+                         <hr class="line1">
+                         <select id="input2" onchange="updateOptions()" name="tos">
+                              <option value="" disabled selected hidden>To</option>
+                              <option value="DIU">DIU</option>
+                              <option value="Uttara">Uttara</option>
+                              <option value="Mirpur">Mirpur</option>
+                              <option value="Dhanmondi">Dhanmondi</option>
+                         </select>
+                    </div>
+                    <div class="width_center">
+                         <button class="green_button">Filter</button>
+                    </div>
+               </form>
+               <script>
+                    function updateOptions() {
+                         var input1 = document.getElementById("input1");
+                         var input2 = document.getElementById("input2");
+                         var selectedValue1 = input1.value;
+                         var selectedValue2 = input2.value;
+                         for (var i = 0; i < input2.options.length; i++) {
+                              input2.options[i].disabled = false;
+                         }
+                         if (selectedValue1 === "Uttara" || selectedValue1 === "Mirpur" || selectedValue1 === "Dhanmondi") {
+                              input2.value = "DIU"; // Set input2 value to DIU
+                              for (var i = 1; i < input2.options.length; i++) {
+                                   input2.options[i].disabled = true;
+                              }
+                              input2.options[1].disabled = false; // Disable all options in input2 except DIU
+                         }
+                    }
+               </script>
+               {% for dhan in dhans %}
+               <div class="ticket ">
+                    <div class="width_center">
+                         <div class="width_space-between Ticket_width">
+                              <div class="location1 location">{{dhan[0]}}</div>
+                              <img src="../static/images/green_round.png" alt="" srcset="" class="round_image">
+                              <hr class="line1">
+                              <img src="../static/images/red_round.png" alt="" srcset="" class="round_image">
+                              <div class="location2 location">{{dhan[1]}}</div>
+                         </div>
+
+                    </div>
+                    <div class="width_center">
+                         <div class="width_space-between Ticket_width">
+                              <div class="">{{dhan[2]}}</div>
+                              <div class="">{{dhan[3]}}</div>
+                         </div>
+                    </div>
+                    <div class="width_center">
+                         <div class="width_space-between Ticket_width">
+                              <div class="">Slot : 1</div>
+                              <div class="">Surjomokhi 1</div>
+                         </div>
+                    </div>
+                    <div class="width_center">
+                         <hr class="line4">
+                    </div>
+                    <div class="width_center m10">
+                         <div class="width_space-between Ticket_width">
+                              <div class="">Status</div>
+                              <div class="div">
+                                   <button class="littlered_button ">{{dhan[4]}}</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               {% endfor %}
+               
+
+               
+
+          </div>
+     </div>
+</body>
+
+</html>

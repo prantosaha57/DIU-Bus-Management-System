@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+     <title>DIU BUS</title>
+     <!-- CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+     <link rel="stylesheet" type="text/css" href="../static/css/home2.css">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/home2.css')}}">
+     <!-- JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div class="main_body">
+          <div class="width_center">
+               <img class="logo" src="static/images/logo.png" alt="">
+          </div>
+          <div style="text-align: center;">
+               <div style="margin-top: 10px; font-size: 20px; font-weight: bold; color:#09509E;">Management</div>
+           </div>
+           
+           
+          <div class="main_area">
+               <div class="width_center">
+                    <div class="box">
+                         <div class="width_center">
+                              <div class="width_space-between width1">
+                                   <a href="payment.html" class="a_box">
+                                        <div class="green_box">
+                                             <img class="box_image" src="../static/images/money.png" alt="">
+                                             <div>Payment</div>
+                                        </div>
+                                   </a>
+                                   <a href="ScheduleManagerView.html" class="a_box">
+                                        <div class="red_box">
+                                             <img class="box_image" src="../static/images/schedule.png" alt="">
+                                             <div>Schedule</div>
+                                        </div>
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="width_center">
+                              <div class="width_space-between width1">
+                                   <a href="Passenger.html" class="a_box">
+                                        <div class="blue_box">
+                                             <img class="box_image" src="../static/images/passenger.png" alt="">
+                                             <div>Passenger</div>
+                                        </div>
+                                   </a>
+                                   <a href="Tickets.html" class="a_box">
+                                        <div class="purpel_box">
+                                             <img class="box_image" src="../static/images/ticket.png" alt="">
+                                             <div>
+                                                  <div>Ticket</div>
+                                             </div>
+                                        </div>
+                                   </a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="width_center">
+                    <a href="index.html" class="a_button"><button class="green_button">Logout</button></a>
+               </div>
+          </div>
+     </div>
+</body>
+
+</html>

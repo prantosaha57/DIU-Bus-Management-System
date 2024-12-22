@@ -1,0 +1,123 @@
+.user {
+     background-image: linear-gradient( #8CF9A9,#3ED081);
+     margin-bottom: 4vh;
+     width: 80%;
+     border-radius: 10px;
+     height: 100px;
+     border: green 5px;
+}
+
+.nameid {
+     height: 25px;
+     width: auto;
+     border-radius: 10px;
+     margin: 15px;
+
+}
+
+.profile {
+     margin-top: 10px;
+     width: 80px;
+     height: 80px;
+     border-radius: 50px;
+     background: none;
+     border: 10px;
+}
+
+.edit_prof {
+     margin-left: 15%;
+}
+
+.edit {
+     margin-left: 15%;
+
+}
+
+.edit .a {
+     margin-bottom: 20px;
+
+}
+
+.logout {
+     margin-top: 200px;
+}
+
+.edit button {
+     cursor: pointer;
+     height: 40px;
+     width: 200px;
+     background: #fff;
+     border: none;
+     border-radius: 30px;
+     box-shadow: 5px 3px 5px rgba(106, 231, 152, 0.798);
+}
+.edit button:hover{
+     cursor: pointer;
+}
+
+.clock {
+     display: flex;
+     width: 100px;
+     margin: 0 auto;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+     transform: translate(-445px, 200px);
+}
+
+.clock div {
+     position: relative;
+     width: 80px;
+     padding: 20px;
+     margin: 0 5px;
+     background: linear-gradient( #8CF9A9,#3ED081);
+     color: #fff;
+     border: none;
+}
+
+
+
+.clock div:last-child {
+     background: linear-gradient(45deg, tomato, lightsalmon);
+}
+
+.container p{
+     transform: translate(-500px, 220px);
+     font-weight: bolder;
+}
+.clock div span {
+     display: block;
+     text-align: center;
+}
+
+.clock div:hover {
+     background: transparent;
+     border: none;
+     cursor: pointer;
+     color: #000;
+}
+
+.clock div span:nth-child(1) {
+     font-size: 15px;
+     font-weight: 800;
+     display: flex;
+     justify-content: center;
+}
+
+.clock div span:nth-child(2) {
+     font-weight: 800;
+     display: flex;
+     justify-content: center;
+}
+
+div .container {
+     position: absolute;
+     top: 50%;
+     width: 100%;
+     transform: translateY(-50%);
+     text-align: center;
+}
+.pps img{
+     padding-top: 40%;
+    color: #000;
+}

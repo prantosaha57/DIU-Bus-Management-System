@@ -1,0 +1,32 @@
+.filter
+{
+     width: 85%;
+     max-width: 397px;
+     margin: 0 auto;
+     border-radius: 30px;
+     border: 0;
+     background-color: #ffffff;
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+a{
+     width: 500px;
+     display: flex;
+     justify-content: center;
+}
+select
+{
+     width: 85%;
+     height: 60px;
+     border: none;
+     outline: 0;
+     border-radius: 30px;
+     padding-left: 30px;
+}
+.green_button
+{
+     margin-bottom: 0vh;
+}
+.mb
+{
+     margin-bottom: 6vh;
+}

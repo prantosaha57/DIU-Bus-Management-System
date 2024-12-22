@@ -1,0 +1,240 @@
+body
+{
+     margin: 0;
+     background-color: #f0f8ff00;
+     height: 100vh;
+}
+.main_body
+{
+     width: 100%;
+     max-width: 430px;
+     min-height: 100%;
+     min-height: 100vh;
+     background-color:  #F0F8FF;
+     background-image: url(../images/Background.png);
+     background-position: bottom;
+     background-repeat: no-repeat;
+     background-size:100%;
+     margin: 0 auto;
+     flex-direction: column;
+     
+}
+.box
+{
+     position: absolute;
+     top: 35%;
+     width: 100%;    
+}
+@media (max-width: 700px) 
+{
+     .main_body 
+     {
+          max-width: 530px;
+     }
+}
+.width_center
+{
+     display: flex;
+     justify-content: center;
+}
+
+.width_space-between{
+     display: flex; 
+     justify-content: space-between;
+     position: relative;
+}
+.logo
+{
+     width: 293px;
+     margin-top: 7vh;
+     
+}
+.main_area
+{
+     margin-top: 10vh;
+}
+input
+{
+     width: 85%;
+     max-width: 397px;
+     height: 60px;
+     margin: 0 auto;
+     margin-bottom: 3vh;
+     border-radius: 30px;
+     border: 0;
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     display: flex;
+     font-size: 16px;
+     text-align: center;
+}
+input::placeholder 
+{
+     text-align: center;
+}
+.green_button
+{
+     width: 85%;
+     max-width: 397px;
+     height: 60px;
+     margin-bottom: 3vh;
+     border-radius: 30px;
+     border: 0;
+     color: rgb(255, 255, 255);
+     background-image: linear-gradient( #8CF9A9,#3ED081);
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     font-size: 18px;
+}
+.littlegreen_button
+{
+     width: 70px;
+     height: 26px;
+     margin: 0 5px;
+     border-radius: 30px;
+     border: 0;
+     color: rgb(255, 255, 255);
+     background-image: linear-gradient( #8CF9A9,#3ED081);
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     font-size: 16px;
+}
+.littlered_button
+{
+     width: 70px;
+     height: 26px;
+     margin: 0 5px;
+     border-radius: 30px;
+     border: 0;
+     color: rgb(255, 255, 255);
+     background-image: linear-gradient(#FE9292,#F34F4F);
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     font-size: 16px;
+}
+.white_button
+{
+     width: 85%;
+     max-width: 397px;
+     height: 60px;
+     border-radius: 30px;
+     border: 0;
+     color: #48BE83;
+     background-color: rgba(255, 255, 255, 0.658);
+     box-shadow: 5px 3px 5px rgba(109, 109, 109, 0.17);
+     text-align: center;
+     font-size: 18px;
+}
+.green_box
+{
+     width: 120px;
+     height: 120px;
+     margin-bottom: 3vh;
+     border-radius: 10px;
+     border: 0;
+     color: rgb(255, 255, 255);
+     background-image: linear-gradient( #8CF9A9,#3ED081);
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     font-size: 18px;
+}
+.red_box
+{
+     width: 120px;
+     height: 120px;
+     margin-bottom: 3vh;
+     border-radius: 10px;
+     border: 0;
+     color: rgb(255, 255, 255);
+     background-image: linear-gradient( #FE9292,#F34F4F);
+     box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     justify-content: center;
+     font-size: 18px;
+}
+.a_button
+{
+     width: 100%;
+     text-align: center;
+}
+a{
+     text-decoration: none;
+     color: grey;
+}
+a:hover
+{
+     color: #48be83;
+}
+.width_center a{
+     width: 500px;
+     display: flex;
+     justify-content: center;
+}
+.ticket
+{
+     background-image: url(../images/ticket_background.png);
+     background-repeat: no-repeat;
+     background-position-x: center;
+     background-size:390px;
+     height: 180px;
+     font-size: 18px;
+     padding:  5vh 0;
+     
+}
+.Ticket_width
+{
+     width:330px;
+}
+.line1
+{
+     color: black;
+     border: none;
+     width: 160px;
+     margin-top: -12px;
+}
+.line4
+{
+     color: black;
+     border: none;
+     margin: 0;
+     width: 330px;
+     margin-top: 9px;
+}
+.location
+{
+     margin-top: -25px;
+}
+.round_image
+{
+     margin: 15px 20px;
+     margin-top: -14px;
+     width: 5px;
+     height: 5px;
+}
+.box_image
+{
+     margin-top: 8px;
+     width: 80px;
+}
+.width1
+{
+     width: 80%;
+}
+.btn-color
+{
+     background-image: linear-gradient( #8CF9A9,#3ED081);
+     color: white;
+     border: 0;
+}
+.width2
+{
+     width: 80%;
+}
+select
+{
+     width: 85%;
+     max-width: 397px;
+     height: 59px;
+     margin: 0 auto;
+     border-radius: 30px;
+     border: 0;
+     background-color: white;
+     display: flex;
+}
